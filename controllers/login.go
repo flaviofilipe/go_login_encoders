@@ -4,8 +4,8 @@ import (
 	"net/http"
 	"text/template"
 
-	"github.com/flaviofilipe/login/models"
-	"github.com/flaviofilipe/login/repositories"
+	"github.com/flaviofilipe/go_login_encoders/models"
+	"github.com/flaviofilipe/go_login_encoders/repositories"
 )
 
 var temp = template.Must(template.ParseGlob("templates/*.html"))

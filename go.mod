@@ -1,4 +1,4 @@
-module github.com/flaviofilipe/login
+module github.com/flaviofilipe/go_login_encoders
 
 go 1.17
 

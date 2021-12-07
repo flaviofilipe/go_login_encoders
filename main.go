@@ -3,7 +3,7 @@ package main
 import (
 	"net/http"
 
-	"github.com/flaviofilipe/login/routes"
+	"github.com/flaviofilipe/go_login_encoders/routes"
 )
 
 func main() {

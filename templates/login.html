@@ -1,0 +1,40 @@
+{{define "Login"}}
+{{template "_head"}}
+
+<h1>{{.Title}}</h1>
+<form action="{{.FormAction}}" method="post">
+    <div class="row">
+        <div class="col-sm-8">
+            <div class="form-group">
+                <label for="email">email:</label>
+                <input type="email" name="email" class="form-control">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-8">
+            <div class="form-group">
+                <label for="password">password:</label>
+                <input type="password" name="password" class="form-control">
+            </div>
+        </div>
+    </div>
+    <button type="submit" value="salvar" class="btn btn-success">Acessar</button>
+    <a href="/" class="btn btn-default">Voltar</a>
+</form>
+
+
+{{ if .User.Email }}
+<div class="alert alert-success" role="alert" style="margin-top: 10px;">
+    {{.User.Email}} logado com sucesso
+</div>
+{{end}}
+
+{{ if .Error }}
+<div class="margin-top-5 alert alert-danger " role="alert" style="margin-top: 10px;">
+    <strong>Erro ao fazer o login:</strong> {{.Error}}
+</div>
+{{end}}
+
+{{template "_footer"}}
+{{end}}
